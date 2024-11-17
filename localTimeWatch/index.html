@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    color: #fff;
+}
+
+/* Centering container */
+.center {
+    text-align: center;
+}
+
+/* Banner styling */
+#banner {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5f5f5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#banner span {
+    color: #76b852;
+}
+
+/* Clock styling */
+#clock {
+    font-size: 48px;
+    font-weight: bold;
+    color: #76b852;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    #banner {
+        font-size: 18px;
+    }
+
+    #clock {
+        font-size: 36px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div id="banner"><span>Your local time</span></div>
+        <div id="clock"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

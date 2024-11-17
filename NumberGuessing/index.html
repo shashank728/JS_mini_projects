@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <style>
+        /* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #74ebd5, #acb6e5);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Wrapper Styles */
+#wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Headings and Text */
+h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #4b79a1;
+}
+
+p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #555;
+}
+
+/* Form Styles */
+.form {
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+input[type="text"] {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background: #4b79a1;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #74ebd5;
+}
+
+/* Result Section */
+.resultparas {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.resultparas span {
+    font-weight: bold;
+    color: #4b79a1;
+}
+
+.loworhi {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Number guessing game </h1>
+        <p>Try and guess a random number between 1 and 100.</p>
+        <p>You have 10 attempts to guess the number.</p>
+        <br>
+        <form class="form" action="">
+            <label id="guess"  for="guessfield">Guess the number</label>
+            <input type="text"  id="guessfield" class="guessfield">
+            <input type="submit" id="subt" value ="Submit guess" class="guesssubmit">
+        </form>
+
+        <div class="resultparas">
+            <p>Previous guesses : <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastresult">10</span></p>
+            <p class="loworhi"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
